@@ -1,0 +1,205 @@
+
+#header {
+	background: radial-gradient(circle, rgba(150,0,0,1) 0%, rgba(134,0,0,1) 50%, rgba(118,0,0,1) 100%);
+	color: white;
+	padding: 10px;
+}
+
+#header #header-content {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#header h1 {
+	color: white;
+	margin: 0px;
+}
+
+#header a {
+	color: #ffffff; /* 89c2c9*/
+}
+
+#header a:hover {
+	color: #dddddd; /*a0dbe2*/
+}
+
+#content {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+#contact {
+	font-size: 13pt;
+}
+
+h1, h3 {
+	font-family: 'Playfair Display', sans-serif;
+	font-weight: 600;
+	color: #444;
+}
+
+h3 {
+	font-size: 16pt;
+}
+
+
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	background: #f7f7f7;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #760000;
+	font-weight: bold;
+}
+
+a.light {
+	font-weight: normal;
+}
+
+a:hover {
+	color: #960000;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
+	#slideshow-container {
+		float: right;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: -130px;
+		/* border: solid 1px #3a190f; */
+		background: #f7f7f7;
+	}
+
+}
+
+@media screen and (max-width: 979px) /* Mobile and Tablet */ {
+	#slideshow-container {
+		margin: 10px auto;
+		display: block;
+		width: 304px;
+		position: relative;
+		background: #f7f7f7;
+	}
+
+	#content {
+		padding: 5px;
+	}
+
+}
+
+.arrows {
+	opacity: 0;
+  transition: opacity 800ms;
+}
+
+#slideshow-images:hover + .arrows {
+	opacity: 1.0;
+}
+
+.arrows:hover {
+	opacity: 1.0;
+}
+
+
+
+/* Hide the images by default */
+.slides {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+	text-decoration: none;
+	color: white;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+
+#papers li {
+	margin-bottom: 5px;
+}
+
+.paper-title {
+	font-weight: bold;
+}
+
+.paper-comment {
+	font-size: 11pt;
+}
+
+.name {
+	font-size: 11pt;
+	color: #444;
+}
+
+#classes li {
+	margin-bottom: 5px;
+}
+
+.class-name {
+	font-weight: bold;
+}
+
+.class-notes {
+	font-size: 11pt;
+}
