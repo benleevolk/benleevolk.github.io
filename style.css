@@ -4,6 +4,12 @@ html {
   scroll-padding-top: 70px; /* Adjust based on your nav bar's height */
 }
 
+@media (max-width: 470px) {
+html {
+    scroll-padding-top: 110px; /* measure your new mobile header height */
+  }
+}
+
 #header, #nav-header, #footer {
   background: radial-gradient(circle at 50% 150px, rgba(150,0,0,1) 0%, rgba(134,0,0,1) 50%, rgba(118,0,0,1) 100%);
   background-attachment: fixed;
@@ -48,6 +54,7 @@ background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3
   padding: 10px 0;
   font-weight: 300;      
 }
+
 
 #header h1 {
 	color: white;
