@@ -6,7 +6,7 @@
 			Ben Lee Volk
         </title>
 
-		<meta name="description" content="Home Page of Ben Lee Volk"/>
+	<meta name="description" content="Home Page of Ben Lee Volk"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#960000" />
@@ -14,34 +14,38 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="canonical" href="https://benleevo.lk/">
 
-
-
-
 	</head>
 
 	<body>
+		
+		<div id="nav-header">
+		<nav class="nav-bar">
+		  <a href="#publications">Publications</a>
+		  <a href="#students">Students</a>
+		  <a href="#teaching">Teaching</a>
+		  <a href="#service">Service</a>
+		  <a href="#background">Background</a>
+		</nav>
+		</div>
+		
 		<div id="header">
+
 		<div id="header-content">
 		<h1>
 			Ben Lee Volk
 		</h1>
 
-		<p id="contact">
-		<a href="https://cs.runi.ac.il/">Efi Arazi School of Computer Science, </a> <br />
-		Reichman University (IDC Herzliya) <br />
-		<a href="mailto:benleevolk@gmail.com">benleevolk@gmail.com</a> <br />
-		</p>
 		</div>
+		
 		</div>
-
-		<div id="content">
-
-
+		
+<div class="page-container">
+  <aside class="photo-column">
     <div id="slideshow-container">
 
     <div id="slideshow-images">
@@ -69,7 +73,7 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </span>
 
-    <div style="text-align:center">
+    <div class="dots-container">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
@@ -79,15 +83,30 @@
   </div>
 
 
+  </aside>
+
+  <main class="content-column">
+
+  <div id="content">
+		<div id="contact">
+		<p><a href="https://cs.runi.ac.il/">Efi Arazi School of Computer Science, </a> <br/>
+		Reichman University</p>
+  		<p><strong>Email: </strong>
+		<a href="mailto:benleevolk@gmail.com">benleevolk@gmail.com</a> </p>
+		</div>
+    
     <h3>Research Interests</h3>
 
-		<p>
-		Computational complexity theory, and in particular algebraic complexity, algorithms for algebraic problems, error correcting codes and pseudorandomness.
-		</p>
+	<p>
+	Computational complexity theory, and in particular algebraic complexity, algorithms for algebraic problems, error correcting codes and pseudorandomness.
+	</p>
 
-		<h3>Publications</h3>
+  </div>
 
-		<ul id="papers">
+
+		<h3 id="publications">Publications</h3>
+
+		<ul id="papers" class="section-list">
 
       <li>
         <div class="paper-title"><a href="https://arxiv.org/abs/2607.05944">A Lower Bound for Read-Once Parity Branching Programs</a></div>
@@ -222,15 +241,21 @@
 
 		</ul>
 
-    <h3>Postdocs and Graduate Students</h3>
-    <ul id="students">
-      <li> Ziv Oznovich (M.Sc., Graduated 2025) </li>
-      <li> Anamay Tengse (Postdoc, 2023-2024) </li>
+    <h3 id="students">Postdocs and Graduate Students</h3>
+    <ul id="students" class="section-list">
+      <li>
+      <div class="student-name">Ziv Oznovich </div>
+      <div class="student-years">M.Sc., Graduated 2025</div> 
+      </li>
+      <li>
+      <div class="student-name">Anamay Tengse </div>
+      <div class="student-years">Postdoc, 2023-2024</div>       
+      </li>
     </ul>
 
-    <h3>Teaching</h3>
+    <h3 id="teaching">Teaching</h3>
 
-    <ul id="classes">
+    <ul id="classes" class="section-list">
       <li>
         <div class="class-name">
          Advanced Algorithms
@@ -268,31 +293,58 @@
       </li>
     </ul>
 
-    <h3>Professional Service</h3>
-    <ul id="service">
-        <li> Program Committees: STOC 2023 </li>
-        <li> Editor for the SICOMP Special Issue for STOC 2023 </li>
-        <li> Editor for the complexity column of SIGACT News (2023 - Present)</li>
+    <h3 id="service">Professional Service</h3>
+    <ul id="service" class="section-list">
+        <li>
+        	<div class="service-titles"> Editor of the complexity column of SIGACT News </div>
+       	    <div class="service-years">(2023 - Present)</div>
+        </li>
+        <li>
+        	<div class="service-titles"> Program Committees </div>
+       	    <div class="service-years">STOC 2023</div>        
+        </li>
+        <li>
+        	<div class="service-titles"> Editor of the SICOMP Special Issue </div>
+       	    <div class="service-years">STOC 2023</div>        
+
+        </li>
     </ul>
 
-    <h3>Academic Background</h3>
+    <h3 id="background">Academic Background</h3>
 
-    <ul>
-      <li> (2021-Present) Faculty at the Efi Arazi School of Computer Science, Reichman University </li>
-      <li> (2020-2021) Postdoc at the <a href="https://www.cs.utexas.edu/">UT Austin CS department</a>, hosted by Dana Moshkovitz and David Zuckerman
-      <li> (2018-2020) <a href="https://www.cmi.caltech.edu/">CMI postdoc</a> at Caltech, hosted by Chris Umans </li>
-      <li> (2014-2018) Ph.D. student at the <a href="https://www.cs.tau.ac.il/~theory/">Theory of Computation</a>
-    group at Tel Aviv University, advised by <a href="https://www.cs.tau.ac.il/~shpilka/">Amir Shpilka</a>. </li>
+    <ul id="background" class="section-list">
+      <li>
+        <div class="background-title">Faculty at the Efi Arazi School of Computer Science, Reichman University</div>
+        <div class="background-years">2021-Present</div>
+      </li>
+      <li>
+        <div class="background-title">Postdoc at the <a href="https://www.cs.utexas.edu/">Department of Computer Science</a>, UT Austin, hosted by Dana Moshkovitz and David Zuckerman</div>
+        <div class="background-years">2020-2021</div>
+      </li>
+       <li>
+        <div class="background-title"><a href="https://www.cmi.caltech.edu/">CMI postdoc</a> at Caltech, hosted by Chris Umans</div>
+        <div class="background-years">2018-2020</div>
+      </li>
+       <li>
+        <div class="background-title">Ph.D. student at <a href="https://www.cs.tau.ac.il/~theory/">Theory of Computation group</a> at the School of Computer Science at Tel Aviv University,
+   advised by <a href="https://www.cs.tau.ac.il/~shpilka/">Amir Shpilka</a></div>
+        <div class="background-years">2014-2018</div>
+      </li>
     </ul>
 
-		<p class="name">
+</div>
+
+  </main>
+  </div>
+
+<div id="footer">
+		<div id="name">
 		<strong>Name guide: </strong> My first name is Ben Lee and my last name is Volk. But it's OK, nobody gets it right the first time.
 		If you call me Ben, I will answer without correcting you and not make a big deal out of it. If you spell it as Ben Lee Volk in your *.bib file (with this exact order and capitalization),
 		BibTeX will correctly infer the first and last names. To read a whole lot more about how BibTeX processes names, see
 		<a href="https://www.tug.org/TUGboat/tb27-2/tb87hufflen.pdf">this paper</a>,
 		which is also likely to fulfill your lifelong dream of reading a document that contains the phrase "First von Last".
-		</p>
-
+		</div>
 
 		</div>
 
@@ -344,24 +396,6 @@
     }, false);
 
 </script>
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=9562516;
-var sc_invisible=1;
-var sc_security="b32cf24a";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web analytics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="http://c.statcounter.com/9562516/0/b32cf24a/1/"
-alt="web analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
 
 	</body>
 

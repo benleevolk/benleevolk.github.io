@@ -1,13 +1,52 @@
 
-#header {
-	background: radial-gradient(circle, rgba(150,0,0,1) 0%, rgba(134,0,0,1) 50%, rgba(118,0,0,1) 100%);
-	color: white;
-	padding: 10px;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Adjust based on your nav bar's height */
+}
+
+#header, #nav-header, #footer {
+  background: radial-gradient(circle at 50% 150px, rgba(150,0,0,1) 0%, rgba(134,0,0,1) 50%, rgba(118,0,0,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+#header, #nav-header {
+  padding: 10px;
+}
+
+#footer {
+	padding: 15px;
 }
 
 #header #header-content {
-	max-width: 960px;
+	max-width: 540px;
 	margin: 0 auto;
+	text-align: center;
+	padding: 1.25rem 0 1.25rem 0;
+background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35) 5%, rgba(255, 255, 255, 0.35) 95%, transparent);
+  background-size: 100% 1px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#header {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+#nav-header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* or flex-start for left alignment */
+  margin: 0 auto;
+  padding: 10px 0;
+  font-weight: 300;      
 }
 
 #header h1 {
@@ -15,12 +54,13 @@
 	margin: 0px;
 }
 
-#header a {
-	color: #ffffff; /* 89c2c9*/
+#header a, #nav-header a, #footer a {
+	text-decoration: none;
+	color: #ffffff; 
 }
 
-#header a:hover {
-	color: #dddddd; /*a0dbe2*/
+#header a:hover, #nav-header a:hover, #footer a:hover {
+	color: #dddddd; 
 }
 
 #content {
@@ -28,9 +68,6 @@
 	max-width: 960px;
 }
 
-#contact {
-	font-size: 13pt;
-}
 
 h1, h3 {
 	font-family: 'Playfair Display', sans-serif;
@@ -39,19 +76,19 @@ h1, h3 {
 }
 
 h3 {
-	font-size: 16pt;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
 }
-
-
 
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	background: #f7f7f7;
 	margin: 0px;
+	font-size: 1.15rem;
 }
 
-a {
+.content-column a {
 	text-decoration: none;
 	color: #760000;
 	font-weight: bold;
@@ -68,11 +105,9 @@ a:hover {
 
 @media screen and (min-width: 980px) /* Desktop */ {
 	#slideshow-container {
-		float: right;
 		padding: 0;
 		margin: 0;
 		position: relative;
-		top: -130px;
 		/* border: solid 1px #3a190f; */
 		background: #f7f7f7;
 	}
@@ -175,31 +210,87 @@ a:hover {
   .prev, .next {font-size: 11px}
 }
 
-#papers li {
-	margin-bottom: 5px;
+
+.section-list {
+	list-style: none;
+	display: grid;
+	padding-left: 0;
+	/*margin-left: -0.3rem;*/
 }
 
-.paper-title {
-	font-weight: bold;
+.section-list li {
+	position: relative;
+	padding: 0.6rem 1.25rem 1.25rem 1.6rem;
+	margin-bottom: 0.5rem;
+    border-radius: 6px;
+  
+  /* Smooth transition for the hover color */
+transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.section-list li:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.section-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0.3rem;
+  color: #968585; 
+  font-weight: bold;
 }
 
 .paper-comment {
-	font-size: 11pt;
+	font-weight: 300;
+	font-size: 1rem;
 }
 
-.name {
-	font-size: 11pt;
-	color: #444;
+.paper-venue, .class-semester, .student-years, .service-years, .background-years {
+	font-weight: 300;
 }
 
-#classes li {
-	margin-bottom: 5px;
-}
-
-.class-name {
-	font-weight: bold;
+#name {
+	font-size: 1rem;
+	margin: 0 auto;
+	max-width: 960px;
 }
 
 .class-notes {
-	font-size: 11pt;
+	font-size: 1rem;
 }
+
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile view: 1 stacked column */
+  gap: 2.5rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Desktop View: Side-by-Side */
+@media (min-width: 768px) {
+  .page-container {
+    grid-template-columns: 304px 1fr; /* Photo column fixed at 280px, text takes the rest */
+  }
+}
+
+#contact p {
+	margin-top: 0px;
+	font-size: 1.3rem;
+}
+
+#slideshow-images img {
+    aspect-ratio: 304 / 456;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0, 0.2);
+ }
+ 
+ .dots-container {
+ 	text-align: center;
+ 	margin-top: 15px;
+ }
