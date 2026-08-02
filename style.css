@@ -24,6 +24,10 @@ html {
 	padding: 15px;
 }
 
+#footer a {
+	font-weight: 700;
+}
+
 #header #header-content {
 	max-width: 540px;
 	margin: 0 auto;
